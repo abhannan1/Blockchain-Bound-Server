@@ -43,7 +43,7 @@ app.use("/comment", commentRouter)
 app.use("/blog", blogRouter)
 app.use("/articals", externalRouter)
 
-app.get('/',(req, res)=>{
+app.get('/home',(req, res)=>{
     // console.log(__dirname)
     // const pathLocation = path.resolve();
     // res.sendFile(path.join(pathLocation, './index.html'))
