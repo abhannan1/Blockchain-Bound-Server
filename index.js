@@ -22,7 +22,7 @@ database.connect()
 app.use(express.json({limit:"100mb"}))
 app.use(cookieParser())
 app.use(cors({
-    origin:[process.env.FRONTEND_URL, https://b-chain-bound.vercel.app, https://b-chain-bound.vercel.app/login, https://b-chain-bound.vercel.app/],
+    origin:[process.env.FRONTEND_URL, "https://b-chain-bound.vercel.app", "https://b-chain-bound.vercel.app/login", "https://b-chain-bound.vercel.app/"],
     methods:["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials:true // if not used then no credentials will reach frontend like in header or cookies
 }))
