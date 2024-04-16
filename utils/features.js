@@ -11,14 +11,14 @@ const sendCookie = ( userDTO, res, message, status=200, accessToken, refreshToke
         httpOnly:true,
         // expire:new Date(Date.now() + 60 * 1000), token for 1 mint
         maxAge:15*60*1000, // token for 15 mints
-        sameSite:"None",
-        secure:true
+        sameSite:"lax",
+        secure:false
     }).cookie("refreshToken" , refreshToken,{
         httpOnly:true,
         // expire:new Date(Date.now() + 60 * 1000), token for 1 mint
         maxAge:15*60*1000, // token for 15 mints
-        sameSite:"None",
-        secure:true
+        sameSite:"lax",
+        secure:false
         // sameSite:process.env.NODE_ENV.trim()==="Development" ? "lax" : "None",
         // secure:process.env.NODE_ENV.trim()==="Development" ? false : true
     }).json({
