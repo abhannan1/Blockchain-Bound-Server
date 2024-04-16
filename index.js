@@ -27,6 +27,7 @@ app.use(cors({
     credentials:true // if not used then no credentials will reach frontend like in header or cookies
 }))
 app.use(bodyParser.urlencoded({limit:"30mb", extended:true}))
+app.set('views', '/views')
 app.set('view engine', 'ejs')
 
 /* CONFIGURATION */
