@@ -26,8 +26,8 @@
     "node": "18.16.1"
   },
   "scripts": {
-    "start": "nodemon index",
-    "dev": "nodemon index"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "keywords": [],
   "author": "",
