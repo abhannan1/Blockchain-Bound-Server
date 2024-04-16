@@ -1,0 +1,99 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    text-decoration:underline;
+    text-underline-offset: 10px;
+}
+
+main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    background-position: cover; 
+    flex-direction: column;
+}
+
+.btn{
+    position: relative;
+    left: 120px;
+    bottom: 210px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 2rem;
+    min-width: 400px;
+    min-height: 300px;
+    border-radius: 20px;
+    max-width: 500px;
+    text-align: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.form2{
+    display: flex;
+    position: static;
+    /* position: relative; */
+}
+
+.email-con, .name-con, .pass-con, .message-con, .tittle-con{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    width: 60%;
+}
+
+input[type=text], input[type=email], input[type=password]{
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: solid 2px red;
+    background-color: aliceblue;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
+    border: none;
+
+}
+
+textarea[type=text-area]{
+    width: 100%;
+    border: none;
+    border-bottom: solid 2px red;
+    background-color: aliceblue;
+}
+
+textarea[type=text-area]:focus{
+    border: none;
+
+}
+
+button{
+    min-height: 2rem;
+    /* min-width: 4rem; */
+    background-color: rgb(0, 255, 179);
+    border-radius: 4px;
+    padding: 0px 10px;
+}
+
+button:hover{
+    background-color: rgb(43, 255, 0);
+    box-shadow: 5px 5px 6px grey;
+
+    border-radius: 8px;
+}

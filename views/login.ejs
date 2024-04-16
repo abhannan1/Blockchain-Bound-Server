@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./storage/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="/login" method="post" class="form">
+            <h1>Login Now</h1>
+            <div class="email-con">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="email" placeholder="enter your email here" value="<%= locals.email %>">
+            </div>
+            <div class="pass-con">
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="password" placeholder="enter password" >
+            </div>
+            <p class="error" style="color: red ;"><%= locals.error %> <%= locals.message %></p>
+            <button type="submit">Login</button>
+        </form>
+       </main>
+</body>
