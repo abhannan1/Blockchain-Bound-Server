@@ -27,21 +27,32 @@ app.use(cookieParser())
 //     credentials:true // if not used then no credentials will reach frontend like in header or cookies
 // }))
 
+// app.use(
+//   cors({
+//     origin: [process.env.FRONTEND_URL, "https://b-chain-bound.vercel.app"],
+//     optionsSuccessStatus: 200,
+//     credentials: true,
+//   })
+// );
+
+// app.options('*', cors()); // Allow preflight requests for all routes
+
+// app.get('/', (req, res) => {
+//   res.header('Access-Control-Allow-Origin', req.headers.origin);
+//   res.header('Access-Control-Allow-Credentials', true);
+//   res.send('Hello from Express.js with CORS!');
+// });
+
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL, "https://b-chain-bound.vercel.app"],
+    origin: function (origin, callback) {
+      return callback(null, true);
+    },
     optionsSuccessStatus: 200,
     credentials: true,
   })
 );
 
-app.options('*', cors()); // Allow preflight requests for all routes
-
-app.get('/', (req, res) => {
-  res.header('Access-Control-Allow-Origin', req.headers.origin);
-  res.header('Access-Control-Allow-Credentials', true);
-  res.send('Hello from Express.js with CORS!');
-});
 
 app.use(bodyParser.urlencoded({limit:"30mb", extended:true}))
 app.set('views', path.join(__dirname, 'views'))
