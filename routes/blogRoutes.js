@@ -6,7 +6,8 @@ const isAuthenticated = require("../middleWares/auth");
 const router = express.Router();
 
 router.post("/addBlog",isAuthenticated , createBlog)
-router.get("/getAllBlogs", isAuthenticated,getALLBlogs)
+// router.get("/getAllBlogs", isAuthenticated,getALLBlogs)
+router.get("/getAllBlogs",getALLBlogs)
 router.get("/getAllBlogsById",isAuthenticated , getAllBlogsById)
 router.get("/:id", isAuthenticated ,getBlogById)
 router.put("/:id", isAuthenticated, updateBlog)
